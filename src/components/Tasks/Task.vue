@@ -24,7 +24,7 @@ const stateTransitions = useTaskTransitions(props.task.status);
       <button
         v-for="(val, key) in stateTransitions.allowedTransitionsList.value"
         :key="key"
-        class="btn-primary btn-sm btn class ml-0 my-1 mr-1"
+        class="btn-primary btn-sm btn class m-1"
         @click.prevent="
           $emit('stateChanged', { task: task, transitionTo: val.key })
         "
